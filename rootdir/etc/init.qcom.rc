@@ -254,6 +254,9 @@ on boot
     chown system system /persist/qc_senseid/bg_estimation/bg_small2_basis.dat
     chown system system /persist/qc_senseid/bg_estimation/bg_small2_off_basis.dat
 
+    mkdir /persist/bms 0700 root system
+    restorecon_recursive /persist
+
 on post-fs
     #change permissions for /dev/ssr_monitor_dev
     chown system system /proc/ssr_monitor_dev
