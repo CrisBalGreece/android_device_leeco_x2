@@ -142,7 +142,9 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     Snap \
+    camera.msm8996 \
     mm-qcamera-ap \
+    libshim_camera \
     libmm-qcamera \
     libstlport
 
