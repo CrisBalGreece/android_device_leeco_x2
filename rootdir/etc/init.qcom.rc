@@ -107,7 +107,7 @@ on boot
     mkdir /persist/drm 0770 system system
 
     mkdir /persist/bluetooth 0770 bluetooth bluetooth
- 
+
     #Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
 
@@ -192,7 +192,7 @@ on boot
     # sleep_sign used by DebugUtils APP
     chown system system /sys/class/leds/blue/sleep_sign
     chmod 0666 /sys/class/leds/blue/sleep_sign
-    
+
     # for fingerprint calibration
     chown system system /persist/qc_senseid/bg_estimation/bg_basis.dat
     chown system system /persist/qc_senseid/bg_estimation/bg_small1_basis.dat
@@ -207,7 +207,7 @@ on boot
     chown system system /sys/class/leds/red/blink
     chown system system /sys/class/leds/green/blink
     chown system system /sys/class/leds/blue/blink
-    
+
 #for WiHD
     chown root system /sys/devices/virtual/video/sii6400/mode
     chown root system /sys/devices/virtual/video/sii6400/wihd/connect
@@ -494,18 +494,7 @@ on property:bluetooth.startbtsnoop=true
 on property:bluetooth.startbtsnoop=false
     stop btsnoop
 
-service qcom-c_core-sh /system/bin/sh /init.qcom.class_core.sh
-    class core
-    user root
-    oneshot
-
-service qcom-c_main-sh /system/bin/sh /init.class_main.sh
-    class main
-    user root
-    oneshot
-
 on property:vold.decrypt=trigger_restart_framework
-    start qcom-c_main-sh
     start config_bt_addr
     start config_bluetooth
 
@@ -780,12 +769,6 @@ service wifi_fccutild /system/bin/wifi_fccutild
 on property:wifi.fccutild.load.qcacld=true
     insmod /system/lib/modules/qca_cld/qca_cld_wlan.ko con_mode=5
 
-service cnss_diag /system/bin/cnss_diag -q
-    class main
-    user root
-    group root
-    oneshot
-
 service cnss-daemon /system/bin/cnss-daemon -n -l
     class late_start
 
@@ -821,47 +804,6 @@ service qcom-sh /system/bin/sh /init.qcom.sh
     class late_start
     user root
     oneshot
-
-service sensor-sh /system/bin/sh /init.qcom.sensors.sh
-    class core
-    user root
-    oneshot
-
-service qcom-post-boot /system/bin/sh /system/etc/init.qcom.post_boot.sh
-    class late_start
-    user root
-    disabled
-    oneshot
-
-service qti-testscripts /system/bin/sh /system/etc/init.qcom.testscripts.sh
-    class late_start
-    user root
-    disabled
-    oneshot
-    seclabel u:r:qti-testscripts:s0
-
-service wifi-sdio-on /system/bin/sh /system/etc/init.qcom.sdio.sh
-    class late_start
-    group wifi inet
-    disabled
-    oneshot
-
-service wifi-crda /system/bin/sh /system/etc/init.crda.sh
-   class late_start
-   user root
-   disabled
-   oneshot
-
-service config-zram /system/bin/sh /system/etc/init.qcom.zram.sh
-   class late_start
-   user root
-   disabled
-   oneshot
-
-on property:sys.boot_completed=1
-    start qcom-post-boot
-    start qti-testscripts
-    start config-zram
 
 service atfwd /system/bin/ATFWD-daemon
     class late_start
@@ -1006,28 +948,6 @@ service diag_mdlog_stop /system/bin/diag_mdlog -k
     disabled
     oneshot
 
-service qlogd /system/xbin/qlogd
-    socket qlogd stream 0662 system system
-    class main
-    disabled
-on property:persist.sys.qlogd=1
-    start qlogd
-on property:persist.sys.qlogd=0
-    stop qlogd
-
-service dloadsvr /system/bin/sh /system/etc/init.qcom.dloadsetup.sh
-    disabled
-    oneshot
-
-service quit_dloadsvr /system/bin/sh /system/etc/init.qcom.dload_quit.sh
-    disabled
-    oneshot
-
-on property:persist.sys.dload.state=1
-    start dloadsvr
-on property:persist.sys.dload.state=0
-    start quit_dloadsvr
-
 service vm_bms /system/bin/vm_bms
     user root
     group root
@@ -1088,13 +1008,6 @@ service mbn-daemon /system/bin/mbn_daemon -u
     group radio cache inet misc audio log qcom_diag
     oneshot
 
-service battd /system/bin/battd
-     class late_start
-     user log
-     group log
-     oneshot
-     disabled
-
 service yep_qmi_server /system/bin/yep_qmi_server
     class core
     user root
@@ -1108,9 +1021,6 @@ service yep_diag /system/bin/yepdiag
 # letv
 on property:init.svc.qmuxd=running
     start wifi_mac
-
-on property:sys.boot_completed=1
-    start battd
 
 service wifi_mac /system/bin/logwrapper /system/bin/set_wifi_mac
     class core
