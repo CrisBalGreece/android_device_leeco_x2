@@ -142,7 +142,8 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     Snap \
-    libcamera_shim \
+    mm-qcamera-ap \
+    libmm-qcamera \
     libstlport
 
 # Connectivity Engine support (CNE)

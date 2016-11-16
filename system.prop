@@ -49,6 +49,8 @@ persist.camera.llc=1
 persist.camera.llnoise=1
 persist.camera.stats.test=5
 camera.hal1.packagelist=com.skype.raider,com.whatsapp,com.tencent.mm,com.google.android.GoogleCamera
+vidc.debug.perf.mode=2
+vidc.enc.dcvs.extra-buff-count=2
 
 ro.qualcomm.cabl=2
 
