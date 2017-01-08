@@ -15,8 +15,7 @@ LOCAL_SHARED_LIBRARIES := \
     libqmi_common_so \
     libgps.utils \
     libdsi_netctrl \
-    libqmiservices \
-    libloc_pla
+    libqmiservices
 
 LOCAL_SRC_FILES += \
     ds_client.c
@@ -38,8 +37,7 @@ LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/qmi-framework/inc \
     $(TARGET_OUT_HEADERS)/qmi/inc \
     $(TARGET_OUT_HEADERS)/gps.utils \
-    $(TARGET_OUT_HEADERS)/data/inc \
-    $(TARGET_OUT_HEADERS)/libloc_pla
+    $(TARGET_OUT_HEADERS)/data/inc
 
 
 LOCAL_PRELINK_MODULE := false
