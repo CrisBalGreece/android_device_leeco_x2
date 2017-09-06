@@ -49,7 +49,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 57436708864
 BOARD_HARDWARE_CLASS += $(DEVICE_PATH)/cmhw
 
 # SELinux
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+# BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # inherit from the proprietary version
 -include vendor/leeco/x2/BoardConfigVendor.mk
