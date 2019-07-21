@@ -169,14 +169,11 @@ etc/firmware/cppf.mbn:vendor/firmware/cppf.mbn
 etc/firmware/cppf.mdt:vendor/firmware/cppf.mdt
 vendor/lib/libcppf.so
 
-# Fingerprint - from X00TD - 8.1.0/OPM1/15.2016.1808.326-20180828
--vendor/app/QFingerprintService/QFingerprintService.apk|48b6c56b6f8fa5e814a3e1d22a1dc5b30230f02c
-
-# Fingerprint - from Capricorn
-bin/qfp-daemon:vendor/bin/qfp-daemon|05447a1ce83dd7377e826bb80497f2d4a9c13ec9
-vendor/lib64/hw/fingerprint.qcom.so|80511ea7a1cb0d869228164df88b6044a6913cc3
-vendor/lib64/libqfp-service.so|af154be82df9af26417d620709792544214fe181
-vendor/lib64/qfp.wakeup.so|20833d76ecac57ca0d42759a7b3ecbb7ce2ebb08
+# Fingerprint - from Capricorn - MIUI 9.6.27 Global dev
+-vendor/app/QFingerprintService/QFingerprintService.apk|4f5405f39168b7cb59609d47baa9bd1ee9331511
+vendor/bin/qfp-daemon|1bd3fdb98510e6be98a3e447033ee8271bd8cd7b
+vendor/lib64/libqfp-service.so|bf2f404ae9eac30f01e8dfadd342d44baba46794
+vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so|4e98e283bd3e414fb2b6f2525b86d111d58ad857
 
 # Offline charger
 vendor/bin/charger|0a3861fd5b997337a40926e7ddb2829461cfded8
