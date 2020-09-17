@@ -23,7 +23,6 @@ $(call inherit-product, device/leeco/x2/device.mk)
 
 # Inherit some common Resurrection stuff.
 $(call inherit-product, vendor/rr/config/common_full_phone.mk)
-TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_FACE_UNLOCK_SUPPORTED := true
 RR_BUILDTYPE := Official
 
