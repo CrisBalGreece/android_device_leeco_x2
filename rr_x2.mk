@@ -23,8 +23,11 @@ $(call inherit-product, device/leeco/x2/device.mk)
 
 # Inherit some common Resurrection stuff.
 $(call inherit-product, vendor/rr/config/common_full_phone.mk)
+
+# RR stuff
 TARGET_FACE_UNLOCK_SUPPORTED := true
-RR_BUILDTYPE := Official
+#RR_BUILDTYPE := Official
+TARGET_GAPPS_ARCH := arm64
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_BRAND := LeEco
@@ -39,4 +42,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=LeMax2_WW \
     PRIVATE_BUILD_DESC="le_x2-user 6.0.1 FKXOSOP5801910311S eng.letv.20161031.012138.wechatpay release-keys"
 
-BUILD_FINGERPRINT := LeEco/LeMax2_WW/le_x2:6.0.1/FKXOSOP5801910311S/letv10310125:user/release-keys
+BUILD_FINGERPRINT := LeEco/ZL1_NA/le_zl1:6.0.1/WEXNAOP5802101261S/letv01261206:user/release-keys
+#BUILD_FINGERPRINT := LeEco/LeMax2_WW/le_x2:6.0.1/FKXOSOP5801910311S/letv10310125:user/release-keys
