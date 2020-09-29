@@ -26,7 +26,7 @@ $(call inherit-product, vendor/rr/config/common_full_phone.mk)
 
 # RR stuff
 TARGET_FACE_UNLOCK_SUPPORTED := true
-#RR_BUILDTYPE := Official
+RR_BUILDTYPE := Official
 TARGET_GAPPS_ARCH := arm64
 
 # Device identifier. This must come after all inclusions.
