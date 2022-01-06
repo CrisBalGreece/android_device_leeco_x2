@@ -1,4 +1,4 @@
-typeattribute hal_fingerprint_default binder_in_vendor_violators;
+#typeattribute hal_fingerprint_default binder_in_vendor_violators;
 
 binder_call(hal_fingerprint_default, vndservicemanager);
 
