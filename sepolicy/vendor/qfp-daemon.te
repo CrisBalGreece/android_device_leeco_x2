@@ -1,4 +1,3 @@
-#typeattribute qfp-daemon binder_in_vendor_violators;
 
 binder_call(qfp-daemon, hal_fingerprint_default);
 
@@ -27,3 +26,7 @@ allow qfp-daemon qfp_stargate_file:dir { create_dir_perms };
 allow qfp-daemon qfp_stargate_file:file { create_file_perms };
 
 binder_use(qfp-daemon);
+
+#A12
+get_prop(qfp-daemon, default_prop)
+allow qfp-daemon default_prop:file { read };
