@@ -16,9 +16,16 @@ function blob_fixup() {
         sed -i "s|/firmware/image|/vendor/f/image|g" "${2}"
         ;;
 
-    # Patch blobs for VNDK
+    vendor/bin/qfp-daemon)
+        # Patch qfp for libbinder
+        sed -i "s|libbinder.so|lbndr_v29.so|g" "${2}"
+        ;;
+
     vendor/lib64/hw/fingerprint.qcom.so | vendor/lib64/qfp.wakeup.so)
+        # Patch blobs for VNDK
         "${PATCHELF}" --remove-needed "libandroid_runtime.so" "${2}"
+        # Patch qfp for libbinder
+        sed -i "s|libbinder.so|lbndr_v29.so|g" "${2}"
         ;;
 
     vendor/lib64/libqfp-service.so)
@@ -26,6 +33,19 @@ function blob_fixup() {
         sed -i "s|/firmware/image|/vendor/f/image|g" "${2}"
         # Patch blobs for VNDK
         sed -i "s|libandroid_runtime.so|libfpshim.so\x00\x00\x00\x00\x00\x00\x00\x00\x00|g" "${2}"
+        # Patch qfp for libbinder
+        sed -i "s|libbinder.so|lbndr_v29.so|g" "${2}"
+        ;;
+
+    vendor/lib64/qfp.wakeup.so)
+        # Patch qfp for libbinder
+        sed -i "s|libbinder.so|lbndr_v29.so|g" "${2}"
+        ;;
+
+    vendor/lib64/lbndr_v29.so)
+        # Patch qfp for libbinder
+        sed -i "s|libcutils.so|lbcut_v29.so|g" "${2}"
+        ;;
     esac
 }
 
