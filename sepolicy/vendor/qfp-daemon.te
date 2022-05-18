@@ -30,3 +30,6 @@ binder_use(qfp-daemon);
 #A12
 get_prop(qfp-daemon, default_prop)
 allow qfp-daemon default_prop:file { read };
+
+# Sepolicy for capricorn fp
+allow qfp-daemon captouch_device:chr_file rw_file_perms;
