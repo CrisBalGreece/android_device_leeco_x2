@@ -32,6 +32,9 @@ on init
     chown media media /sys/devices/virtual/typec/typec_device/supported_dev
     chown media media /sys/module/cyccg/parameters/typec_headset_with_analog
 
+on init
+    write /sys/bus/i2c/devices/12-0020/captouch 1
+
 on boot
     # Chown led nodes as needed from UI running on system server
     chown cameraserver camera /sys/devices/soc/soc:qcom,camera-flash/flashled1

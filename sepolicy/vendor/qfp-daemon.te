@@ -27,3 +27,6 @@ allow qfp-daemon qfp_stargate_file:dir { create_dir_perms };
 allow qfp-daemon qfp_stargate_file:file { create_file_perms };
 
 binder_use(qfp-daemon);
+
+# Sepolicy for capricorn Oreo fp
+allow qfp-daemon captouch_device:chr_file rw_file_perms;
