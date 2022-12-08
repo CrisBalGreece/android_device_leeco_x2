@@ -63,8 +63,8 @@ PRODUCT_PACKAGES += \
     init.tfa.sh \
     tinyplay
 
-# Vendor properties
--include $(LOCAL_PATH)/vendor_prop.mk
+# Properties
+-include $(LOCAL_PATH)/properties.mk
 
 # msm8996-common
 $(call inherit-product, device/leeco/msm8996-common/msm8996.mk)
