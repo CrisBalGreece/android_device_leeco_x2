@@ -13,7 +13,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=560
 
 # Fingerprint
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.qfp=true \
     persist.qfp.fd_enabled=1 \
     persist.qfp.ssc_enable_island=1 \
