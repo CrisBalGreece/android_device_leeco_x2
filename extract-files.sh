@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2020 The LineageOS Project
+# Copyright (C) 2017-2022 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -17,15 +17,9 @@ function blob_fixup() {
         ;;
 
     # Patch blobs for VNDK
-    vendor/lib64/hw/fingerprint.qcom.so | vendor/lib64/qfp.wakeup.so)
-        "${PATCHELF}" --remove-needed "libandroid_runtime.so" "${2}"
-        ;;
-
     vendor/lib64/libqfp-service.so)
         # Hex edit /firmware/image to /vendor/firmware_mnt to delete the outdated rootdir symlinks
         sed -i "s|/firmware/image|/vendor/f/image|g" "${2}"
-        # Patch blobs for VNDK
-        sed -i "s|libandroid_runtime.so|libfpshim.so\x00\x00\x00\x00\x00\x00\x00\x00\x00|g" "${2}"
     esac
 }
 
