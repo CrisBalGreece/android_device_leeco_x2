@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_x2.mk
+    $(LOCAL_DIR)/aicp_x2.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_x2-user \
-    lineage_x2-userdebug \
-    lineage_x2-eng
+    aicp_x2-user \
+    aicp_x2-userdebug \
+    aicp_x2-eng
