@@ -1,6 +1,6 @@
 Copyright (C) 2016 The CyanogenMod Project
 
-Copyright (C) 2017-2020 The LineageOS Project
+Copyright (C) 2023 The LegionOS Project
 
 Unified device configuration for LeEco Le Max 2 / Pro
 ===========================
