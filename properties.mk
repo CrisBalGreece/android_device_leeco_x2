@@ -8,6 +8,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qcom.ad.calib.data=/vendor/etc/ad_calib_x2.cfg
 
+# Bluetooth
+PRODUCT_PROPERTY_OVERRIDES += \
+bluetooth.device.default_name=LeMax2
+
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=560
