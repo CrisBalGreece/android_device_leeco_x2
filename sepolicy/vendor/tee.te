@@ -11,3 +11,4 @@ allow tee system_data_file:dir { r_file_perms };
 allow tee qfp_stargate_file:dir { create_dir_perms };
 
 allow tee qfp_stargate_file:file { create_file_perms };
+allow tee tmpfs:dir r_dir_perms
