@@ -172,11 +172,11 @@ vendor/lib/libcppf.so
 # Fingerprint - from X00TD - 8.1.0/OPM1/15.2016.1808.326-20180828
 -vendor/app/QFingerprintService/QFingerprintService.apk|48b6c56b6f8fa5e814a3e1d22a1dc5b30230f02c
 
-# Fingerprint - from Capricorn
-bin/qfp-daemon:vendor/bin/qfp-daemon|05447a1ce83dd7377e826bb80497f2d4a9c13ec9
-vendor/lib64/hw/fingerprint.qcom.so|80511ea7a1cb0d869228164df88b6044a6913cc3
-vendor/lib64/libqfp-service.so|af154be82df9af26417d620709792544214fe181
-vendor/lib64/qfp.wakeup.so|20833d76ecac57ca0d42759a7b3ecbb7ce2ebb08
+# Fingerprint - from Capricorn (fixed for A13)
+bin/qfp-daemon:vendor/bin/qfp-daemon|269ca4d3f6d5a07aa91f5b9c8565bbee38ce78d1
+vendor/lib64/hw/fingerprint.qcom.so|8e39d1faac8b0e9de24b8b4eaa120d8cf9845d24
+vendor/lib64/libqfp-service.so|8081a6df9e6983ef1a8b6d4f5ec2352e4554c456
+vendor/lib64/qfp.wakeup.so|f260a7e8ed1eda5568c8c1b50f4ec18b7888ec01
 
 # Offline charger
 vendor/bin/charger|0a3861fd5b997337a40926e7ddb2829461cfded8
