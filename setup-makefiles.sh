@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2023 The LegionOS Project
+# Copyright (C) 2023 The AospOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
