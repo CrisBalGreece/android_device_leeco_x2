@@ -1,5 +1,5 @@
 # Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2023 The LegionOS Project
+# Copyright (C) 2023 The DerpFestOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,18 +22,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/leeco/x2/device.mk)
 
 # Inherit some LegionOS common
-$(call inherit-product, vendor/legion/config/common.mk)
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_BRAND := LeEco
 PRODUCT_DEVICE := x2
 PRODUCT_MANUFACTURER := LeEco
-PRODUCT_NAME := legion_x2
+PRODUCT_NAME := derp_x2
 
-# LegionOS flags
+# DerpFestOS flags
 TARGET_BOOT_ANIMATION_RES := 1080
-LEGION_OFFICIAL := true
-LEGION_MAINTAINER := CrisBalGreece
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
@@ -42,6 +40,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-leeco
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=le_x2 \
     PRODUCT_NAME=LeMax2_WW \
-    PRIVATE_BUILD_DESC="raven-user 13 TQ2A.230505.002 9891397 release-keys"
+    PRIVATE_BUILD_DESC="le_x2-user 6.0.1 FKXOSOP5801910311S eng.letv.20161031.012138.wechatpay release-keys"
 
-BUILD_FINGERPRINT := google/raven/raven:13/TQ2A.230505.002/9891397:user/release-keys
+BUILD_FINGERPRINT := LeEco/LeMax2_WW/le_x2:6.0.1/FKXOSOP5801910311S/letv10310125:user/release-keys

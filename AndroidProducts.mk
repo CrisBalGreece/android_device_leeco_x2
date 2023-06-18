@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018-2023 The LegionOS Project
+# Copyright (C) 2018-2023 The DerpFestOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/legion_x2.mk
+    $(LOCAL_DIR)/derp_x2.mk
 
 COMMON_LUNCH_CHOICES := \
-    legion_x2-user \
-    legion_x2-userdebug \
-    legion_x2-eng
+    derp_x2-user \
+    derp_x2-userdebug \
+    derp_x2-eng
