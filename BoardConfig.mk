@@ -22,7 +22,7 @@
 #
 
 # inherit from msm8996-common
--include device/leeco/msm8996-common/BoardConfigCommon.mk
+include device/leeco/msm8996-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/leeco/x2
 
@@ -45,4 +45,4 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # inherit from the proprietary version
--include vendor/leeco/x2/BoardConfigVendor.mk
+include vendor/leeco/x2/BoardConfigVendor.mk
