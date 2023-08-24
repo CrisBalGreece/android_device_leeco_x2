@@ -1,5 +1,5 @@
 # Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2023 The LegionOS Project
+# Copyright (C) 2023 The EvolutionOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,19 +21,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device
 $(call inherit-product, device/leeco/x2/device.mk)
 
-# Inherit some LegionOS common
-$(call inherit-product, vendor/legion/config/common.mk)
+# Inherit some EvolutionOS common
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_BRAND := LeEco
 PRODUCT_DEVICE := x2
 PRODUCT_MANUFACTURER := LeEco
-PRODUCT_NAME := legion_x2
+PRODUCT_NAME := evolution_x2
 
-# LegionOS flags
+# EvolutionOS flags
 TARGET_BOOT_ANIMATION_RES := 1080
-LEGION_OFFICIAL := true
-LEGION_MAINTAINER := CrisBalGreece
+TARGET_BUILD_APERTURE_CAMERA := true
+TARGET_USES_MINI_GAPPS := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
@@ -42,6 +42,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-leeco
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=le_x2 \
     PRODUCT_NAME=LeMax2_WW \
-    PRIVATE_BUILD_DESC="raven-user 13 TQ2A.230505.002 9891397 release-keys"
+    PRIVATE_BUILD_DESC="redfin-user 13 TQ3A.230805.001 10316531 release-keys"
 
-BUILD_FINGERPRINT := google/raven/raven:13/TQ2A.230505.002/9891397:user/release-keys
+BUILD_FINGERPRINT := google/redfin/redfin:13/TQ3A.230805.001/10316531:user/release-keys
