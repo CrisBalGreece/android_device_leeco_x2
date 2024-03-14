@@ -41,6 +41,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-leeco
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=le_x2 \
     PRODUCT_NAME=LeMax2_WW \
-    PRIVATE_BUILD_DESC="redfin-user 13 TQ3A.230805.001 10316531 release-keys"
-
-BUILD_FINGERPRINT := google/redfin/redfin:13/TQ3A.230805.001/10316531:user/release-keys
+    BUILD_FINGERPRINT="motorola/griffin_retcn/griffin:6.0.1/MCC24.246-37/42:user/release-keys" \
+    BUILD_THUMBPRINT="6.0.1/MCC24.246-37/42:user/release-keys" \
+    PRIVATE_BUILD_DESC="griffin-user 6.0.1 MCC24.246-37 42 user release-keys"
